@@ -1,0 +1,92 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+
+}
+
+body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(29, 20, 20);
+}
+
+.contenedor{
+  width: 1000px;
+  height: 400px;
+  background-image: url(img/fondo.jpg);
+  background-size: 1000px 400px; 
+  position: relative;
+  overflow: hidden;
+}
+
+.silueta{
+  width:70px ;
+  height: 120px;
+  position: absolute;
+  top: 290px;
+  left:20px;
+  background-image: url(img/perfil.png);
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+}
+ .saltar{
+  animation: saltar 1.5s linear 1;
+ }
+ .morir{
+  animation: morir 3.5s linear 1;
+  animation-fill-mode: forwards;
+ }
+ @keyframes morir{
+  0%{  top: 290px;}
+  100%{top: -100px;}
+ }
+@keyframes  saltar{
+  0%{  top: 290px;}
+  50%{top: 50px;}
+  70%{top: 50px;}
+  100%{top: 290px;}
+  }
+.obtaculo{
+  width: 200px;
+  height: 100px; 
+  position: absolute;
+  top: 300px;
+  right:-200px;
+  background-image: url(img/carro3.gif);
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: animacion 3.5s linear infinite;
+
+}
+
+@keyframes  animacion{ 
+100%{right:1100px;}
+}
+
+
+
+.time{
+  font-size:30px ;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  
+}
+.scoreConten{
+  width: 200px;
+  height: 100px;
+  background-color: blueviolet;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  font-size: 30px;
+  text-align: center;
+  opacity: 0;
+}
